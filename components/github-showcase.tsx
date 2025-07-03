@@ -20,7 +20,7 @@ const mockRepos = [
     stars: 18,
     forks: 5,
     language: "JavaScript",
-    url: "https://github.com/MeeksonJr/interview-prep-ai",
+    url: "https://github.com/MeeksonJr/Interview-Prep-ai.",
   },
   {
     name: "ai-content-generator",
@@ -36,7 +36,7 @@ const mockRepos = [
     stars: 15,
     forks: 3,
     language: "TypeScript",
-    url: "https://github.com/MeeksonJr/portfolio-2025",
+    url: "https://github.com/MeeksonJr/mo-portfolio-2025",
   },
 ]
 

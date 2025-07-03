@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github, Star, GitFork, ExternalLink, Calendar, MapPin, Users, Eye, AlertCircle, RefreshCw } from 'lucide-react'
+import { Github, Star, GitFork, ExternalLink, Calendar, Eye, AlertCircle, RefreshCw } from 'lucide-react'
 import { useState, useEffect } from "react"
 import Inspectable from "./inspectable"
 
@@ -57,21 +57,21 @@ export default function GitHubShowcase() {
       setLoading(true)
       setError(null)
 
-      const response = await fetch('/api/github-repos', {
-        next: { revalidate: 300 } // Cache for 5 minutes
+      const response = await fetch("/api/github-repos", {
+        next: { revalidate: 300 }, // Cache for 5 minutes
       })
-      
+
       const result: GitHubData = await response.json()
-      
+
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to fetch GitHub data')
+        throw new Error(result.error || "Failed to fetch GitHub data")
       }
 
       console.log("✅ GitHub Showcase: Data fetched successfully")
       setData(result)
     } catch (err) {
       console.error("❌ GitHub Showcase: Error fetching data:", err)
-      setError(err instanceof Error ? err.message : 'Unknown error occurred')
+      setError(err instanceof Error ? err.message : "Unknown error occurred")
     } finally {
       setLoading(false)
     }
@@ -84,23 +84,23 @@ export default function GitHubShowcase() {
   const getLanguageColor = (language: string) => {
     const colors: Record<string, string> = {
       TypeScript: "#3178c6",
-      JavaScript: "#f1e05a", 
+      JavaScript: "#f1e05a",
       Python: "#3572A5",
       Java: "#b07219",
       HTML: "#e34c26",
       CSS: "#1572B6",
       Go: "#00ADD8",
       Rust: "#dea584",
-      PHP: "#4F5D95"
+      PHP: "#4F5D95",
     }
     return colors[language] || "#6b7280"
   }
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric'
+    return new Date(dateString).toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
     })
   }
 
@@ -108,11 +108,7 @@ export default function GitHubShowcase() {
     return (
       <section className="py-20 px-4 bg-gray-900/30">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="text-green-400 text-sm mb-4">$ git log --oneline --graph</div>
             <div className="flex items-center gap-3 mb-12">
               <Github className="text-white" size={32} />
@@ -135,11 +131,7 @@ export default function GitHubShowcase() {
     return (
       <section className="py-20 px-4 bg-gray-900/30">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="text-green-400 text-sm mb-4">$ git log --oneline --graph</div>
             <div className="flex items-center gap-3 mb-12">
               <Github className="text-white" size={32} />
@@ -183,9 +175,7 @@ export default function GitHubShowcase() {
             <Github className="text-white" size={32} />
             <h2 className="text-3xl md:text-4xl font-bold">GitHub Showcase</h2>
             {!data?.success && (
-              <span className="px-2 py-1 bg-yellow-900/50 text-yellow-400 text-xs rounded">
-                Fallback Data
-              </span>
+              <span className="px-2 py-1 bg-yellow-900/50 text-yellow-400 text-xs rounded">Fallback Data</span>
             )}
           </div>
 
@@ -222,7 +212,7 @@ export default function GitHubShowcase() {
             {repos.map((repo, index) => (
               <Inspectable key={repo.id} elementId="github-repo">
                 <motion.div
-                  className="border border-gray-700 p-6 rounded-lg bg-black/50 hover:border-green-400/50 transition-colors group relative"
+                  className="border border-gray-700 p-6 rounded-lg bg-black/50 hover:border-green-400/50 transition-colors group relative h-full flex flex-col"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -263,25 +253,20 @@ export default function GitHubShowcase() {
                     </div>
                   </div>
 
-                  <p className="text-gray-300 mb-4 leading-relaxed text-sm">
-                    {repo.description}
-                  </p>
+                  <p className="text-gray-300 mb-4 leading-relaxed text-sm flex-grow">{repo.description}</p>
 
                   {/* Topics */}
                   {repo.topics && repo.topics.length > 0 && (
                     <div className="flex flex-wrap gap-1 mb-4">
                       {repo.topics.slice(0, 3).map((topic) => (
-                        <span
-                          key={topic}
-                          className="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs"
-                        >
+                        <span key={topic} className="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs">
                           {topic}
                         </span>
                       ))}
                     </div>
                   )}
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mt-auto">
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <div className="flex items-center gap-1">
                         <Star size={14} />
@@ -301,8 +286,8 @@ export default function GitHubShowcase() {
 
                     {repo.language && (
                       <div className="flex items-center gap-2">
-                        <div 
-                          className="w-3 h-3 rounded-full" 
+                        <div
+                          className="w-3 h-3 rounded-full"
                           style={{ backgroundColor: getLanguageColor(repo.language) }}
                         ></div>
                         <span className="text-sm text-gray-400">{repo.language}</span>
@@ -336,9 +321,7 @@ export default function GitHubShowcase() {
               <p className="text-xs text-gray-500 mt-4">
                 Last updated: {formatDate(data.fetched_at)}
                 {data.rate_limit_remaining && (
-                  <span className="ml-2">
-                    • API calls remaining: {data.rate_limit_remaining}
-                  </span>
+                  <span className="ml-2">• API calls remaining: {data.rate_limit_remaining}</span>
                 )}
               </p>
             )}

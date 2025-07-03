@@ -4,12 +4,7 @@ const GITHUB_USERNAME = "MeeksonJr"
 const GITHUB_API_BASE = "https://api.github.com"
 
 // Featured repositories (you can customize this list)
-const FEATURED_REPOS = [
-  "edusphere-ai",
-  "interview-prep-ai", 
-  "ai-content-generator",
-  "portfolio-2025"
-]
+const FEATURED_REPOS = ["edusphere-ai", "interview-prep-ai", "ai-content-generator", "portfolio-2025"]
 
 export const maxDuration = 30
 
@@ -18,7 +13,7 @@ export async function GET() {
 
   try {
     const headers: HeadersInit = {
-      "Accept": "application/vnd.github.v3+json",
+      Accept: "application/vnd.github.v3+json",
       "User-Agent": "portfolio-app",
     }
 
@@ -33,44 +28,37 @@ export async function GET() {
     // Fetch user profile
     const userResponse = await fetch(`${GITHUB_API_BASE}/users/${GITHUB_USERNAME}`, {
       headers,
-      next: { revalidate: 300 } // Cache for 5 minutes
+      next: { revalidate: 300 }, // Cache for 5 minutes
     })
 
     if (!userResponse.ok) {
-      throw new Error(`GitHub user API failed: ${userResponse.status}`)
+      throw new Error(`GitHub user API failed: ${userResponse.status} ${userResponse.statusText}`)
     }
 
     const userProfile = await userResponse.json()
     console.log("✅ GitHub API: User profile fetched")
 
     // Fetch all repositories
-    const reposResponse = await fetch(
-      `${GITHUB_API_BASE}/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`,
-      {
-        headers,
-        next: { revalidate: 300 } // Cache for 5 minutes
-      }
-    )
+    const reposResponse = await fetch(`${GITHUB_API_BASE}/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`, {
+      headers,
+      next: { revalidate: 300 }, // Cache for 5 minutes
+    })
 
     if (!reposResponse.ok) {
-      throw new Error(`GitHub repos API failed: ${reposResponse.status}`)
+      throw new Error(`GitHub repos API failed: ${reposResponse.status} ${reposResponse.statusText}`)
     }
 
     const allRepos = await reposResponse.json()
     console.log(`📦 GitHub API: Found ${allRepos.length} repositories`)
 
     // Filter and prioritize featured repos
-    const featuredRepos = FEATURED_REPOS.map(repoName => 
-      allRepos.find((repo: any) => repo.name === repoName)
-    ).filter(Boolean)
+    const featuredRepos = FEATURED_REPOS.map((repoName) => allRepos.find((repo: any) => repo.name === repoName)).filter(
+      Boolean,
+    )
 
     // Get other notable repos (high stars, recent activity)
     const otherNotableRepos = allRepos
-      .filter((repo: any) => 
-        !FEATURED_REPOS.includes(repo.name) && 
-        !repo.fork && 
-        repo.stargazers_count > 0
-      )
+      .filter((repo: any) => !FEATURED_REPOS.includes(repo.name) && !repo.fork && repo.stargazers_count > 0)
       .sort((a: any, b: any) => b.stargazers_count - a.stargazers_count)
       .slice(0, 2)
 
@@ -92,7 +80,7 @@ export async function GET() {
       created_at: repo.created_at,
       size: repo.size,
       open_issues: repo.open_issues_count,
-      is_featured: FEATURED_REPOS.includes(repo.name)
+      is_featured: FEATURED_REPOS.includes(repo.name),
     }))
 
     // Calculate stats
@@ -108,7 +96,7 @@ export async function GET() {
       location: userProfile.location,
       blog: userProfile.blog,
       company: userProfile.company,
-      created_at: userProfile.created_at
+      created_at: userProfile.created_at,
     }
 
     console.log("✅ GitHub API: Data transformed successfully")
@@ -119,20 +107,23 @@ export async function GET() {
       repositories: transformedRepos,
       stats,
       fetched_at: new Date().toISOString(),
-      rate_limit_remaining: reposResponse.headers.get('x-ratelimit-remaining'),
+      rate_limit_remaining: reposResponse.headers.get("x-ratelimit-remaining"),
+    })
+  } catch (error) {
+    console.error("💥 GitHub API Error:", {
+      message: error.message,
+      stack: error.stack,
     })
 
-  } catch (error) {
-    console.error("💥 GitHub API Error:", error)
-    
-    // Return fallback data on error
+    // Return fallback data with success: false to indicate it's fallback
     return NextResponse.json({
       success: false,
       error: error.message,
       repositories: getFallbackRepos(),
       stats: getFallbackStats(),
       fetched_at: new Date().toISOString(),
-    }, { status: 500 })
+      is_fallback: true,
+    })
   }
 }
 
@@ -149,7 +140,7 @@ function getFallbackRepos() {
       url: "https://github.com/MeeksonJr/edusphere-ai",
       homepage: null,
       topics: ["ai", "education", "nextjs"],
-      is_featured: true
+      is_featured: true,
     },
     {
       id: 2,
@@ -161,7 +152,7 @@ function getFallbackRepos() {
       url: "https://github.com/MeeksonJr/interview-prep-ai",
       homepage: null,
       topics: ["ai", "interview", "career"],
-      is_featured: true
+      is_featured: true,
     },
     {
       id: 3,
@@ -173,7 +164,7 @@ function getFallbackRepos() {
       url: "https://github.com/MeeksonJr/ai-content-generator",
       homepage: null,
       topics: ["ai", "content", "saas"],
-      is_featured: true
+      is_featured: true,
     },
     {
       id: 4,
@@ -185,8 +176,8 @@ function getFallbackRepos() {
       url: "https://github.com/MeeksonJr/portfolio-2025",
       homepage: "https://mohameddatt.com",
       topics: ["portfolio", "nextjs", "framer-motion"],
-      is_featured: true
-    }
+      is_featured: true,
+    },
   ]
 }
 
@@ -202,6 +193,6 @@ function getFallbackStats() {
     bio: "Full Stack Developer passionate about AI and web technologies",
     location: "Norfolk, Virginia",
     blog: "https://mohameddatt.com",
-    company: null
+    company: null,
   }
 }

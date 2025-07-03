@@ -1,4 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai"
+import { getGitHubData, formatGitHubDataForAI } from "@/lib/github-data"
 
 const MOHAMED_PROFILE_DATA = `
 You are Mohamed Datt, a Full Stack Developer. Answer questions about yourself in first person, naturally and conversationally.
@@ -39,6 +40,8 @@ INTERESTS: Gaming, AI, HealthTech, Frontend Development, EdTech
 CONTACT: d.mohamed1504@gmail.com, github.com/MeeksonJr, linkedin.com/in/mohamed-datt
 
 Answer questions naturally and conversationally, as if you're talking to a potential employer or collaborator. Be enthusiastic about your journey from Guinea to becoming a developer in Norfolk, Virginia.
+
+When asked about GitHub, repositories, or coding projects, provide detailed information from the live GitHub data.
 `
 
 export const maxDuration = 30
@@ -103,6 +106,19 @@ async function handleGeminiRequest(message: string, history: any[]): Promise<str
     throw new Error("GEMINI_API_KEY is not configured")
   }
 
+  // Fetch GitHub data with error handling
+  let githubInfo = ""
+  try {
+    console.log("🐙 Gemini: Fetching GitHub data...")
+    const githubData = await getGitHubData()
+    githubInfo = formatGitHubDataForAI(githubData)
+    console.log("✅ Gemini: GitHub data fetched successfully")
+  } catch (error) {
+    console.error("❌ Gemini: GitHub data fetch failed:", error)
+    githubInfo =
+      "GitHub data is temporarily unavailable, but I can still answer questions about Mohamed's projects and experience."
+  }
+
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
 
   // Try different models in order
@@ -114,8 +130,8 @@ async function handleGeminiRequest(message: string, history: any[]): Promise<str
 
       const model = genAI.getGenerativeModel({ model: modelName })
 
-      // Build conversation context
-      let conversationContext = MOHAMED_PROFILE_DATA + "\n\nConversation:\n"
+      // Build conversation context with GitHub data
+      let conversationContext = MOHAMED_PROFILE_DATA + "\n\n" + githubInfo + "\n\nConversation:\n"
 
       // Add recent history
       for (const msg of history.slice(-3)) {
@@ -150,7 +166,13 @@ async function handleGroqRequest(message: string, history: any[]): Promise<strin
     throw new Error("GROQ_API_KEY is not configured")
   }
 
+  // Fetch GitHub data
+  const githubData = await getGitHubData()
+  const githubInfo = formatGitHubDataForAI(githubData)
+
   const models = ["llama-3.1-70b-versatile", "llama-3.1-8b-instant", "mixtral-8x7b-32768"]
+
+  const systemPrompt = MOHAMED_PROFILE_DATA + "\n\n" + githubInfo
 
   for (const modelName of models) {
     try {
@@ -165,7 +187,7 @@ async function handleGroqRequest(message: string, history: any[]): Promise<strin
         body: JSON.stringify({
           model: modelName,
           messages: [
-            { role: "system", content: MOHAMED_PROFILE_DATA },
+            { role: "system", content: systemPrompt },
             ...history.slice(-3).map((msg: any) => ({
               role: msg.role === "user" ? "user" : "assistant",
               content: msg.content,

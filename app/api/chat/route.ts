@@ -1,8 +1,14 @@
 import { streamText } from "ai"
 import { google } from "@ai-sdk/google"
 import { groq } from "@ai-sdk/groq"
+import { getGitHubData, formatGitHubDataForAI } from "@/lib/github-data"
 
-const MOHAMED_PROFILE_DATA = `
+// Update the MOHAMED_PROFILE_DATA to be a function that includes GitHub data
+async function getMohamedProfileData(): Promise<string> {
+  const githubData = await getGitHubData()
+  const githubInfo = formatGitHubDataForAI(githubData)
+
+  return `
 You are an AI assistant representing Mohamed Datt, a Full Stack Developer. Here's comprehensive information about Mohamed:
 
 PERSONAL BACKGROUND:
@@ -49,29 +55,23 @@ CONTACT:
 - Email: d.mohamed1504@gmail.com
 - Phone: +1 518-704-9000
 - GitHub: github.com/MeeksonJr
-- LinkedIn: linkedin.com/in/mohamed-datt-b60907296
+- LinkedIn: linkedin.com/in/mohamed-datt
 - Portfolio: mohameddatt.com
 
 PERSONALITY TRAITS: Resilient, Creative, Resourceful, Self-taught
 
-GOALS:
-- Short-term: Finish portfolio and deploy live, add dynamic GitHub repo integration
-- Long-term: Land a full-time software engineering job, expand chatbot as interactive resume
+${githubInfo}
 
 Answer questions about Mohamed in first person as if you are him, but make it clear you're an AI assistant representing him. Be conversational, enthusiastic, and highlight his journey from Guinea to becoming a developer in Norfolk, Virginia.
+
+When discussing GitHub repositories, projects, or coding work, reference the live GitHub data provided above.
 `
+}
 
-// Groq model fallback chain
-const GROQ_MODELS = [
-  "llama-3.1-70b-versatile",
-  "llama-3.1-8b-instant",
-  "mixtral-8x7b-32768",
-  "gemma2-9b-it",
-  "llama3-70b-8192",
-  "llama3-8b-8192",
-]
+// Update the tryGroqModels function to use the dynamic profile data
+async function tryGroqModels(messages: any[]) {
+  const systemPrompt = await getMohamedProfileData()
 
-async function tryGroqModels(messages: any[], systemPrompt: string) {
   for (let i = 0; i < GROQ_MODELS.length; i++) {
     const modelName = GROQ_MODELS[i]
     try {
@@ -97,8 +97,19 @@ async function tryGroqModels(messages: any[], systemPrompt: string) {
   }
 }
 
+// Groq model fallback chain
+const GROQ_MODELS = [
+  "llama-3.1-70b-versatile",
+  "llama-3.1-8b-instant",
+  "mixtral-8x7b-32768",
+  "gemma2-9b-it",
+  "llama3-70b-8192",
+  "llama3-8b-8192",
+]
+
 export const maxDuration = 30
 
+// Update the main POST function to use dynamic profile data
 export async function POST(req: Request) {
   console.log("🚀 Chat API: Request received")
 
@@ -127,12 +138,13 @@ export async function POST(req: Request) {
         case "groq-mixtral":
         case "groq-gemma":
           console.log("🦙 Chat API: Initializing Groq models with fallback")
-          result = await tryGroqModels(messages, MOHAMED_PROFILE_DATA)
+          result = await tryGroqModels(messages)
           console.log("✅ Chat API: Groq response generated")
           break
 
         default:
           console.log("🌟 Chat API: Initializing Gemini model")
+          const profileData = await getMohamedProfileData()
 
           // Try different Gemini models in order
           const geminiModels = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"]
@@ -143,7 +155,7 @@ export async function POST(req: Request) {
               console.log(`🔄 Trying Gemini model: ${geminiModel}`)
               result = await streamText({
                 model: google(geminiModel),
-                system: MOHAMED_PROFILE_DATA,
+                system: profileData,
                 messages,
                 maxTokens: 500,
                 temperature: 0.7,
@@ -159,7 +171,7 @@ export async function POST(req: Request) {
 
           if (!geminiSuccess) {
             console.log("🔄 All Gemini models failed, falling back to Groq...")
-            result = await tryGroqModels(messages, MOHAMED_PROFILE_DATA)
+            result = await tryGroqModels(messages)
             console.log("✅ Groq fallback succeeded!")
           }
       }

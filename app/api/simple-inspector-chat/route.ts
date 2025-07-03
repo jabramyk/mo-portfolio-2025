@@ -1,4 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai"
+import { getGitHubData, formatGitHubDataForAI } from "@/lib/github-data"
 
 export const maxDuration = 30
 
@@ -69,6 +70,10 @@ async function handleGeminiRequest(message: string, elementInfo: any, history: a
     throw new Error("GEMINI_API_KEY is not configured")
   }
 
+  // Fetch GitHub data
+  const githubData = await getGitHubData()
+  const githubInfo = formatGitHubDataForAI(githubData)
+
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
 
   // Try different models in order
@@ -90,6 +95,8 @@ Current Element Information:
 - Technologies: ${elementInfo.tech.join(", ")}
 - Design Inspiration: ${elementInfo.inspiration}
 
+${githubInfo}
+
 Answer questions about this specific element naturally and conversationally. Explain your implementation choices, design decisions, and how this showcases your skills. Be technical but approachable.
 
 You can discuss:
@@ -101,6 +108,7 @@ You can discuss:
 - Responsive design approaches
 - Animation and interaction details
 - Your development process
+- How this relates to your GitHub projects
 
 Keep responses focused and conversational, like you're talking to a potential employer or collaborator.
 `
@@ -141,6 +149,10 @@ async function handleGroqRequest(message: string, elementInfo: any, history: any
     throw new Error("GROQ_API_KEY is not configured")
   }
 
+  // Fetch GitHub data
+  const githubData = await getGitHubData()
+  const githubInfo = formatGitHubDataForAI(githubData)
+
   const models = ["llama-3.1-70b-versatile", "llama-3.1-8b-instant", "mixtral-8x7b-32768"]
 
   const systemPrompt = `
@@ -152,6 +164,8 @@ Current Element Information:
 - Technical Details: ${elementInfo.details}
 - Technologies: ${elementInfo.tech.join(", ")}
 - Design Inspiration: ${elementInfo.inspiration}
+
+${githubInfo}
 
 Answer questions about this specific element naturally and conversationally. Explain your implementation choices, design decisions, and how this showcases your skills. Be technical but approachable.
 

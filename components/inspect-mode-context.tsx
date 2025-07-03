@@ -237,6 +237,21 @@ const ELEMENT_INFO = {
     tech: ["Message Styling", "Chat UI", "Typography", "Visual Hierarchy"],
     inspiration: "Creating a natural conversation experience that reflects Mohamed's communication style",
   },
+  "terminal-adventure": {
+    title: "Interactive Terminal Adventure Game",
+    description: "Unique gamified storytelling experience that engages users while showcasing Mohamed's journey",
+    details:
+      "Built with React state management, TypeScript interfaces, and Framer Motion animations. Features branching narratives, character progression, inventory system, and multiple endings based on user choices. Demonstrates creative problem-solving and user engagement strategies.",
+    tech: [
+      "React State Management",
+      "TypeScript Interfaces",
+      "Framer Motion",
+      "Interactive Storytelling",
+      "Game Logic",
+    ],
+    inspiration:
+      "Replacing repetitive project showcases with an engaging, memorable experience that makes users want to hire Mohamed. Combines terminal aesthetics with RPG-style progression to create emotional connection.",
+  },
 }
 
 export function InspectModeProvider({ children }: { children: ReactNode }) {

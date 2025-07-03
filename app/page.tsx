@@ -3,7 +3,6 @@ import Hero from "@/components/hero"
 import About from "@/components/about"
 import Experience from "@/components/experience"
 import Education from "@/components/education"
-import Projects from "@/components/projects"
 import Skills from "@/components/skills"
 import GitHubShowcase from "@/components/github-showcase"
 import Contact from "@/components/contact"
@@ -16,6 +15,7 @@ import { InspectModeProvider } from "@/components/inspect-mode-context"
 import MiniInspector from "@/components/mini-inspector"
 import Inspectable from "@/components/inspectable"
 import InspectToggle from "@/components/inspect-toggle"
+import TerminalAdventure from "@/components/terminal-adventure"
 
 export default function Portfolio() {
   return (
@@ -53,9 +53,9 @@ export default function Portfolio() {
           </div>
         </Inspectable>
 
-        <Inspectable elementId="projects">
+        <Inspectable elementId="terminal-adventure">
           <div id="projects">
-            <Projects />
+            <TerminalAdventure />
           </div>
         </Inspectable>
 

@@ -15,7 +15,7 @@ import { InspectModeProvider } from "@/components/inspect-mode-context"
 import MiniInspector from "@/components/mini-inspector"
 import Inspectable from "@/components/inspectable"
 import InspectToggle from "@/components/inspect-toggle"
-import TerminalAdventure from "@/components/terminal-adventure"
+import TerminalAdventureEnhanced from "@/components/terminal-adventure-enhanced"
 
 export default function Portfolio() {
   return (
@@ -55,7 +55,7 @@ export default function Portfolio() {
 
         <Inspectable elementId="terminal-adventure">
           <div id="projects">
-            <TerminalAdventure />
+            <TerminalAdventureEnhanced />
           </div>
         </Inspectable>
 

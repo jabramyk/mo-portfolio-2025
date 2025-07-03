@@ -49,7 +49,7 @@ CONTACT:
 - Email: d.mohamed1504@gmail.com
 - Phone: +1 518-704-9000
 - GitHub: github.com/MeeksonJr
-- LinkedIn: linkedin.com/in/mohamed-datt
+- LinkedIn: linkedin.com/in/mohamed-datt-b60907296
 - Portfolio: mohameddatt.com
 
 PERSONALITY TRAITS: Resilient, Creative, Resourceful, Self-taught

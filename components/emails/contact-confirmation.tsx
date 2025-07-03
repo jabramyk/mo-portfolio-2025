@@ -26,7 +26,7 @@ export function ContactConfirmation({ name }: ContactConfirmationProps) {
                 GitHub
               </Link>{" "}
               or connect with me on{" "}
-              <Link href="https://linkedin.com/in/mohamed-datt" style={link}>
+              <Link href="www.linkedin.com/in/mohamed-datt-b60907296" style={link}>
                 LinkedIn
               </Link>
               .

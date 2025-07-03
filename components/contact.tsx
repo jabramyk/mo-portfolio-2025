@@ -61,14 +61,14 @@ export default function Contact() {
                 </motion.a>
 
                 <motion.a
-                  href="https://linkedin.com/in/mohamed-datt"
+                  href="www.linkedin.com/in/mohamed-datt-b60907296"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-colors text-sm md:text-base"
                   whileHover={{ x: 5 }}
                 >
                   <Linkedin className="text-green-400 flex-shrink-0" size={20} />
-                  <span>linkedin.com/in/mohamed-datt</span>
+                  <span>linkedin.com/in/mohamed-datt-b60907296</span>
                 </motion.a>
               </div>
             </div>

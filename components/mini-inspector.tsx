@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, Lightbulb, Code, Palette, MessageCircle, Send, Bot, User } from "lucide-react"
 import { useInspectMode } from "./inspect-mode-context"
+import TypingAnimation from "./typing-animation"
 
 interface Message {
   id: string
@@ -251,7 +252,7 @@ export default function MiniInspector() {
                   <div className="text-center text-gray-400 text-sm">
                     <p className="mb-2">👋 Hey! Ask me anything about this element!</p>
                     <p className="text-xs">I can explain the code, design decisions, and implementation details.</p>
-                    <p className="text-xs mt-1 text-gray-500">Element: {info.title}</p>
+                    <p className="text-xs mt-1 text-gray-500">I also have access to Mohamed's complete GitHub data!</p>
                   </div>
                 )}
 
@@ -280,7 +281,11 @@ export default function MiniInspector() {
                           : "bg-gray-800 text-white border border-gray-700"
                       }`}
                     >
-                      {message.content}
+                      {message.role === "assistant" ? (
+                        <TypingAnimation text={message.content} speed={15} />
+                      ) : (
+                        message.content
+                      )}
                     </div>
 
                     {message.role === "user" && (

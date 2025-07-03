@@ -2,15 +2,17 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { MessageCircle, X, Send, Bot, User, Settings, RefreshCw } from "lucide-react"
+import TypingAnimation from "./typing-animation"
 
 interface Message {
   id: string
   role: "user" | "assistant"
   content: string
   timestamp: Date
+  isTyping?: boolean
 }
 
 export default function AIChatbotSimple() {
@@ -21,8 +23,14 @@ export default function AIChatbotSimple() {
   const [input, setInput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const messagesEndRef = useRef<HTMLDivElement>(null)
 
   console.log("🤖 Simple Chatbot: Component rendered")
+
+  // Auto-scroll to bottom when new messages arrive
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }, [messages])
 
   const models = [
     { id: "gemini", name: "Gemini Direct", color: "text-blue-400" },
@@ -46,6 +54,17 @@ export default function AIChatbotSimple() {
 
     setMessages((prev) => [...prev, userMsg])
     setInput("")
+
+    // Add typing indicator
+    const typingMsg: Message = {
+      id: (Date.now() + 1).toString(),
+      role: "assistant",
+      content: "",
+      timestamp: new Date(),
+      isTyping: true,
+    }
+
+    setMessages((prev) => [...prev, typingMsg])
 
     try {
       console.log("📡 Simple Chatbot: Making fetch request to /api/simple-chat")
@@ -77,28 +96,34 @@ export default function AIChatbotSimple() {
         throw new Error(data.error)
       }
 
-      // Add assistant message
-      const assistantMsg: Message = {
-        id: (Date.now() + 1).toString(),
-        role: "assistant",
-        content: data.response || data.content || "I received your message but couldn't generate a response.",
-        timestamp: new Date(),
-      }
+      // Remove typing indicator and add real response with typing animation
+      setMessages((prev) => {
+        const withoutTyping = prev.filter((msg) => !msg.isTyping)
+        const assistantMsg: Message = {
+          id: (Date.now() + 2).toString(),
+          role: "assistant",
+          content: data.response || data.content || "I received your message but couldn't generate a response.",
+          timestamp: new Date(),
+        }
+        return [...withoutTyping, assistantMsg]
+      })
 
-      setMessages((prev) => [...prev, assistantMsg])
       console.log("✅ Simple Chatbot: Message added successfully")
     } catch (err) {
       console.error("❌ Simple Chatbot: Error:", err)
       setError(err instanceof Error ? err.message : "An unknown error occurred")
 
-      // Add error message to chat
-      const errorMsg: Message = {
-        id: (Date.now() + 2).toString(),
-        role: "assistant",
-        content: `Sorry, I encountered an error: ${err instanceof Error ? err.message : "Unknown error"}`,
-        timestamp: new Date(),
-      }
-      setMessages((prev) => [...prev, errorMsg])
+      // Remove typing indicator and add error message
+      setMessages((prev) => {
+        const withoutTyping = prev.filter((msg) => !msg.isTyping)
+        const errorMsg: Message = {
+          id: (Date.now() + 3).toString(),
+          role: "assistant",
+          content: `Sorry, I encountered an error: ${err instanceof Error ? err.message : "Unknown error"}`,
+          timestamp: new Date(),
+        }
+        return [...withoutTyping, errorMsg]
+      })
     } finally {
       setIsLoading(false)
     }
@@ -161,7 +186,7 @@ export default function AIChatbotSimple() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-white">Chat with Mohamed</h3>
-                    <p className="text-xs text-gray-400">Ask me about my experience and projects</p>
+                    <p className="text-xs text-gray-400">Ask me about any of my GitHub repositories</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
@@ -218,9 +243,14 @@ export default function AIChatbotSimple() {
               {messages.length === 0 && (
                 <div className="text-center text-gray-400 text-sm">
                   <p className="mb-2">👋 Hey! I'm Mohamed.</p>
-                  <p>Ask me anything about my experience, projects, or skills!</p>
+                  <p className="mb-2">Ask me about ANY of my GitHub repositories!</p>
                   <p className="text-xs mt-2 text-gray-500">Model: {selectedModel}</p>
-                  <p className="text-xs text-gray-600">Try asking: "Tell me about your projects"</p>
+                  <div className="text-xs text-gray-600 mt-2 space-y-1">
+                    <p>Try asking:</p>
+                    <p>"Tell me about your EduSphere AI project"</p>
+                    <p>"What's your most starred repository?"</p>
+                    <p>"Show me your recent projects"</p>
+                  </div>
                 </div>
               )}
 
@@ -259,7 +289,23 @@ export default function AIChatbotSimple() {
                         : "bg-gray-800 text-white border border-gray-700"
                     }`}
                   >
-                    {message.content}
+                    {message.isTyping ? (
+                      <div className="flex space-x-1">
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                        <div
+                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          style={{ animationDelay: "0.1s" }}
+                        ></div>
+                        <div
+                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                          style={{ animationDelay: "0.2s" }}
+                        ></div>
+                      </div>
+                    ) : message.role === "assistant" ? (
+                      <TypingAnimation text={message.content} speed={20} />
+                    ) : (
+                      message.content
+                    )}
                   </div>
 
                   {message.role === "user" && (
@@ -270,26 +316,8 @@ export default function AIChatbotSimple() {
                 </div>
               ))}
 
-              {isLoading && (
-                <div className="flex gap-3 justify-start">
-                  <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Bot size={12} className="text-black" />
-                  </div>
-                  <div className="bg-gray-800 text-white border border-gray-700 p-3 rounded-lg text-sm">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div
-                        className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                        style={{ animationDelay: "0.1s" }}
-                      ></div>
-                      <div
-                        className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                        style={{ animationDelay: "0.2s" }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              )}
+              {/* Scroll anchor */}
+              <div ref={messagesEndRef} />
             </div>
 
             {/* Input */}
@@ -298,7 +326,7 @@ export default function AIChatbotSimple() {
                 <input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ask about my experience..."
+                  placeholder="Ask about any repository..."
                   className="flex-1 px-3 py-2 bg-gray-900 border border-gray-700 rounded text-white text-sm focus:border-green-400 focus:outline-none"
                   disabled={isLoading}
                 />

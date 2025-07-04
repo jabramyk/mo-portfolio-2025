@@ -62,7 +62,7 @@ export async function submitContactFormWithConfirmation(prevState: any, formData
 
     // Send notification email to Mohamed
     const { data: notificationData, error: notificationError } = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
+      from: "Mohamed Datt <contact@mohameddatt.com>",
       to: ["d.mohamed1504@gmail.com"],
       replyTo: emailStr,
       subject: `New Portfolio Contact: ${nameStr}`,

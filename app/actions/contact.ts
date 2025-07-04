@@ -59,9 +59,9 @@ export async function submitContactForm(prevState: any, formData: FormData) {
 
     console.log("📧 Contact Form: Sending email via Resend...")
 
-    // Send email using Resend
+    // Send email using Resend with verified domain
     const { data, error } = await resend.emails.send({
-      from: "Mohamed Datt <contact@mohameddatt.com>",
+      from: "Mohamed Datt <contact@mohameddatt.com>", // ✅ Fixed: Using verified domain
       to: ["d.mohamed1504@gmail.com"], // Mohamed's email
       replyTo: emailStr, // User's email for easy reply
       subject: `New Portfolio Contact: ${nameStr}`,

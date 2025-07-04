@@ -22,74 +22,72 @@
 
 ## 🌟 About This Portfolio
 
-Welcome to my creative, terminal-inspired portfolio! This isn't just another developer portfolio - it's an **interactive experience** that tells the story of a 20-year-old developer who learned English from Dora the Explorer and built AI-powered SaaS applications while studying Computer Science.
-
-Born in Guinea 🇬🇳, raised in NYC 🗽, now coding in Norfolk, Virginia 🏫 - this portfolio showcases modern web development, AI integration, and creative storytelling through an **interactive terminal adventure game** that lets you experience my journey firsthand.
+Welcome to my creative, terminal-inspired portfolio! This isn't just another developer portfolio - it's an **interactive experience** that tells the story of a 20-year-old developer who learned English from Dora the Explorer and built a career in AI-powered web development.
 
 **Live Demo:** [mohameddatt.com](https://mohameddatt.com) *(Coming Soon)*
 
-## 🎮 **The Terminal Adventure Experience**
+## 🎮 **The Terminal Adventure Game**
 
-The centerpiece of this portfolio is an **interactive terminal game** that tells my real story:
+The centerpiece of this portfolio is an **interactive terminal adventure** that lets visitors experience my real journey:
 
-### 🌍 **My Real Journey (2004-2025)**
+### 🌍 **Real Story Timeline:**
 - **2004**: Born in Guinea, West Africa
-- **2011**: Moved to NYC at age 6, learned English in 3 months through cartoons
-- **2018**: Moved to Queens, discovered coding and game development
-- **2022**: Moved to Virginia for college at Tidewater Community College
-- **2024**: Graduated with A.S. in Computer Science, won 1st place in internship competition
-- **2025**: Currently at Old Dominion University, building AI-powered SaaS applications
+- **2011**: Moved to NYC at age 6, learned English in 3 months from cartoons
+- **2018**: Moved to Queens, discovered coding
+- **2022**: Started Computer Science at Tidewater Community College
+- **2024**: Graduated TCC, won 1st place in internship competition
+- **2025**: Currently at Old Dominion University, building AI-powered SaaS
 
-### 🎯 **Interactive Game Features**
+### 🎯 **Interactive Features:**
 - **Character Creation**: Choose traits that affect the story
-- **Secret Developer Commands**: `debug`, `sudo`, `npm install mo`, `stack`, `projects`
+- **Secret Commands**: `debug`, `sudo`, `npm install mo`, `stack`
 - **Achievement System**: Unlock real milestones from my journey
-- **Project Discovery**: Find my actual GitHub repositories as you progress
-- **Multiple Endings**: Different paths based on your choices
-- **Save Progress**: Continue your journey across sessions
+- **Multiple Endings**: Different paths based on user choices
+- **Live GitHub Integration**: Discover real projects as you progress
+- **Save Progress**: Continue where you left off
+
+### 🏆 **Real Achievements Unlocked:**
+- 🎓 **Academic Excellence**: TCC Computer Science Graduate
+- 🏆 **Competition Winner**: 1st place out of 13 teams
+- 🚀 **Project Builder**: 5+ AI-powered SaaS applications
+- 🌍 **Cultural Bridge**: Guinea → NYC → Norfolk journey
+- 📺 **Language Master**: English fluency in 3 months
 
 ## ✨ Features
 
-### 🎨 **Creative Design**
-- **Terminal-Inspired UI**: Black & white theme with green accents
-- **Smooth Animations**: Powered by Framer Motion
-- **Responsive Design**: Mobile-first approach
-- **Interactive Elements**: Hover effects and micro-interactions
+### 🎨 **Terminal-Inspired Design**
+- **Authentic Terminal UI**: Black & white with green matrix accents
+- **Animated Elements**: Blinking cursors, typing effects, system stats
+- **Interactive Commands**: Real terminal commands and responses
+- **Matrix Background**: Subtle animated grid patterns
 
 ### 🤖 **AI-Powered Interactions**
 - **Dual Chatbots**: Gemini 2.0 Flash and Groq AI models
-- **Personal Assistant**: Trained on my complete profile and GitHub data
+- **Personal Assistant**: Trained on my complete life story and projects
 - **Element Inspector**: AI explains code and design decisions
 - **GitHub Integration**: Live repository data and project details
-- **Typing Animations**: Realistic AI response animations
 
 ### 🎯 **Interactive Features**
-- **Terminal Adventure Game**: 15-minute interactive story experience
 - **Command Hub**: Circular navigation menu with terminal aesthetics
-- **Inspector Mode**: Click any element to learn about its implementation
+- **Inspector Mode**: Click any element to learn about implementation
 - **Floating Navigation**: Smooth section scrolling with progress indicator
-- **GitHub Showcase**: Live repository data with search and filtering
+- **Real-time Stats**: Live system uptime, location, and status
 
-### 📧 **Professional Contact**
-- **Resend Integration**: Professional email handling
-- **React Email Templates**: Beautiful, responsive emails
+### 📧 **Professional Contact System**
+- **Verified Domain**: contact@mohameddatt.com (no more test emails!)
+- **React Email Templates**: Beautiful, responsive email design
 - **Form Validation**: Client and server-side validation
-- **Auto-responses**: Confirmation emails for users
-
-### 🔧 **Developer Experience**
-- **TypeScript**: Full type safety throughout
-- **Modern React**: Server Components and Actions
-- **Performance Optimized**: Fast loading and smooth interactions
-- **SEO Ready**: Optimized for search engines
+- **Auto-responses**: Professional confirmation emails
 
 ## 🛠️ Tech Stack
 
 ### **Frontend**
 - **Framework**: Next.js 15.1.3 (App Router)
 - **Language**: TypeScript
-- **Styling**: TailwindCSS + shadcn/ui
+- **Styling**: TailwindCSS
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
+- **UI Components**: shadcn/ui
 
 ### **AI & APIs**
 - **AI SDK**: Vercel AI SDK
@@ -99,51 +97,8 @@ The centerpiece of this portfolio is an **interactive terminal game** that tells
 
 ### **Deployment**
 - **Platform**: Vercel
-- **Domain**: Custom domain ready
+- **Domain**: mohameddatt.com (verified)
 - **Environment**: Production optimized
-
-## 🚀 My Real Projects
-
-### 🎓 **EduSphere AI** (2024)
-**Stack**: Next.js, Supabase, Gemini, TailwindCSS
-- Student dashboard with AI assignment assistant
-- Blog generator with multi-platform publishing
-- Calendar integration with subscription management
-- Supports Substack, Medium, and custom platforms
-
-### 💼 **InterviewPrep AI** (2024)
-**Stack**: Next.js, PostgreSQL, Gemini, Firebase, PayPal
-- AI-powered mock interviews (voice + text)
-- Resume analysis and job matching
-- Progress tracking and analytics
-- User-generated interview sharing platform
-
-### 📝 **AI Content Generator** (2024)
-**Stack**: Next.js 14, Supabase, Gemini, Hugging Face, Recharts
-- Generate blog, social media, and product content
-- Sentiment analysis and keyword extraction
-- Analytics dashboard with detailed insights
-- API access with tiered subscription model
-
-### 🔍 **SnapFind** (2024)
-**Stack**: Next.js, Gemini Vision, Hugging Face
-- AI-powered image analysis and description
-- Object detection and scene understanding
-- Multi-model AI integration for accuracy
-
-### 🏥 **myLife Health Tracker** (2024)
-**Stack**: Next.js, Supabase, Gemini, Chart.js
-- AI-powered health report analysis
-- Trend tracking and insights
-- Personalized health recommendations
-
-## 🏆 Achievements & Recognition
-
-- **🥇 1st Place Winner**: Fall 2024 Internship Competition (13 teams)
-- **🎓 A.S. Computer Science**: Tidewater Community College (Dec 2024)
-- **📚 Current Student**: Old Dominion University (B.S. Computer Science)
-- **💻 Self-Taught**: Full-stack development since high school
-- **🌍 Multilingual**: English (fluent), French (native)
 
 ## 🚀 Quick Start
 
@@ -180,7 +135,7 @@ The centerpiece of this portfolio is an **interactive terminal game** that tells
    GEMINI_API_KEY=your_gemini_api_key
    GROQ_API_KEY=your_groq_api_key
    
-   # Required for contact form
+   # Required for contact form (IMPORTANT: Use verified domain!)
    RESEND_API_KEY=your_resend_api_key
    
    # Optional for GitHub integration
@@ -208,41 +163,71 @@ The centerpiece of this portfolio is an **interactive terminal game** that tells
 | `RESEND_API_KEY` | ✅ | Resend email service key | [Resend Dashboard](https://resend.com/api-keys) |
 | `GITHUB_TOKEN` | ⚪ | GitHub personal access token | [GitHub Settings](https://github.com/settings/tokens) |
 
+### 🚨 **Important Email Setup:**
+Make sure to verify your domain in Resend dashboard and use your verified domain email (e.g., `contact@yourdomain.com`) instead of the test email (`onboarding@resend.dev`).
+
+## 🎮 **Real Projects Showcased**
+
+### 🎓 **EduSphere AI** (2024)
+- **Stack**: Next.js, Supabase, Gemini, TailwindCSS
+- **Features**: Student dashboard, AI assignment assistant, blog generator
+- **Achievement**: Part of 1st place winning internship project
+
+### 💼 **InterviewPrep AI** (2024)
+- **Stack**: Next.js, PostgreSQL, Gemini, Firebase, PayPal
+- **Features**: AI mock interviews (voice + text), resume analysis
+- **Innovation**: Real-time feedback and progress tracking
+
+### 📝 **AI Content Generator** (2024)
+- **Stack**: Next.js 14, Supabase, Gemini, Hugging Face, Recharts
+- **Features**: Blog/social/product content generation, analytics dashboard
+- **Business**: Tiered subscriptions and API access
+
+### 🔍 **SnapFind** (2024)
+- **Stack**: Next.js, Gemini Vision, Hugging Face
+- **Features**: Advanced image analysis and object detection
+- **AI**: Multi-model image processing pipeline
+
+### 🏥 **myLife Health Tracker** (2024)
+- **Stack**: Next.js, Supabase, Gemini, Chart.js
+- **Features**: AI-powered health report analysis and insights
+- **Impact**: Personal health management automation
+
 ## 📁 Project Structure
 
 \`\`\`
 portfolio-2025/
 ├── 📁 app/
-│   ├── 📁 actions/          # Server Actions
-│   ├── 📁 api/              # API Routes (Chat, GitHub, Contact)
-│   ├── globals.css          # Global styles
-│   ├── layout.tsx           # Root layout
-│   └── page.tsx             # Main page
+│   ├── 📁 actions/          # Server Actions (contact form, etc.)
+│   ├── 📁 api/              # API Routes (AI chat, GitHub data)
+│   ├── globals.css          # Global styles & terminal theme
+│   ├── layout.tsx           # Root layout with metadata
+│   └── page.tsx             # Main page with all sections
 ├── 📁 components/
-│   ├── 📁 emails/           # Email templates
+│   ├── 📁 emails/           # React Email templates
 │   ├── 📁 ui/               # shadcn/ui components
-│   ├── about.tsx            # About section
-│   ├── ai-chatbot-simple.tsx # Main chatbot
-│   ├── command-hub.tsx      # Circular navigation
-│   ├── contact.tsx          # Contact form
-│   ├── education.tsx        # Education timeline
-│   ├── experience.tsx       # Work experience
-│   ├── footer.tsx           # Footer component
-│   ├── github-showcase.tsx  # GitHub repos display
-│   ├── hero.tsx             # Landing section
+│   ├── about.tsx            # About section with real story
+│   ├── ai-chatbot-simple.tsx # Main AI chatbot
+│   ├── command-hub.tsx      # Circular terminal navigation
+│   ├── contact.tsx          # Terminal-style contact form
+│   ├── education.tsx        # TCC → ODU timeline
+│   ├── experience.tsx       # Internship & achievements
+│   ├── footer.tsx           # Terminal footer with system stats
+│   ├── github-showcase.tsx  # Live GitHub repository data
+│   ├── hero.tsx             # Landing section with typing effect
 │   ├── inspect-*.tsx        # Inspector mode components
-│   ├── mini-inspector.tsx   # Element inspector
-│   ├── projects.tsx         # Featured projects
-│   ├── skills.tsx           # Technical skills
-│   ├── terminal-adventure.tsx # Interactive story game
-│   └── typing-*.tsx         # Typing animations
+│   ├── mini-inspector.tsx   # Element inspector with AI
+│   ├── projects.tsx         # Featured project showcase
+│   ├── skills.tsx           # Technical skills with animations
+│   ├── terminal-adventure-enhanced.tsx # Interactive story game
+│   └── typing-*.tsx         # Various typing animations
 ├── 📁 lib/
 │   └── github-data.ts       # GitHub API integration
 ├── 📁 public/
-│   ├── 📁 images/           # Images and assets
-│   └── resume-*.pdf         # Resume file
+│   ├── 📁 images/           # Profile photos and assets
+│   └── resume-Mohamed-Datt-Full Stack Developer-2025.pdf
 ├── package.json
-├── tailwind.config.ts
+├── tailwind.config.ts       # Terminal theme configuration
 ├── tsconfig.json
 └── README.md
 \`\`\`
@@ -250,57 +235,52 @@ portfolio-2025/
 ## 🎮 Usage Guide
 
 ### **Terminal Adventure Game**
-- **Start**: Click "Play Terminal Adventure" in the main section
-- **Interact**: Make choices that affect the story outcome
-- **Commands**: Try secret developer commands like `debug`, `sudo`, `stack`
-- **Progress**: Your journey is saved automatically
-- **Endings**: Multiple paths lead to different contact opportunities
-
-### **Navigation**
-- **Command Hub**: Click the green terminal icon (top-right) for quick navigation
-- **Floating Nav**: Use the dots on the left side for section jumping
-- **Smooth Scrolling**: All navigation includes smooth scroll animations
+1. **Start the Journey**: Click "Play Terminal Adventure" in the projects section
+2. **Make Choices**: Select traits and decisions that shape the story
+3. **Unlock Achievements**: Discover real milestones from my journey
+4. **Secret Commands**: Try typing `debug`, `sudo`, or `npm install mo`
+5. **Multiple Endings**: Different paths lead to different outcomes
 
 ### **AI Chatbots**
 - **Main Chat**: Click the chat bubble (bottom-right) to talk with Mohamed
-- **Inspector Chat**: Enable inspector mode and click any element for technical details
-- **Model Selection**: Automatic fallback between Gemini and Groq models
-- **GitHub Integration**: Ask about any of my repositories or projects
+- **Ask About Projects**: "Tell me about EduSphere AI" or "What's your best project?"
+- **Personal Questions**: "How did you learn English?" or "What's your story?"
+- **Technical Details**: "What's your favorite tech stack?"
 
 ### **Inspector Mode**
 - **Enable**: Click the "Inspect Mode" button (top-left)
-- **Explore**: Click any element to see technical details
-- **Learn**: Ask the AI about implementation details
+- **Explore**: Click any element to see technical implementation details
+- **Learn**: Ask the AI about code architecture and design decisions
 - **Exit**: Click the X button or toggle off
 
-### **Contact Form**
-- **Professional**: Sends formatted emails via Resend
-- **Validation**: Real-time form validation
-- **Confirmation**: Success messages and email confirmations
+### **Contact System**
+- **Professional**: Sends formatted emails via verified domain
+- **Validation**: Real-time form validation with terminal aesthetics
+- **Quick Actions**: Direct links to resume, GitHub, and LinkedIn
 
 ## 🎨 Customization
 
-### **Colors & Theme**
+### **Terminal Theme Colors**
 \`\`\`css
 /* Primary colors in globals.css */
 :root {
-  --primary: #22c55e;      /* Green */
-  --background: #000000;    /* Black */
-  --foreground: #ffffff;    /* White */
+  --primary: #22c55e;      /* Matrix Green */
+  --background: #000000;    /* Terminal Black */
+  --foreground: #ffffff;    /* Terminal White */
+  --accent: #10b981;        /* Success Green */
+  --muted: #374151;         /* Terminal Gray */
 }
 \`\`\`
 
-### **Content Updates**
-- **Personal Info**: Update `components/hero.tsx` and `components/about.tsx`
-- **Projects**: Modify `components/projects.tsx`
-- **Experience**: Edit `components/experience.tsx`
-- **Skills**: Update `components/skills.tsx`
-- **Terminal Game**: Edit `components/terminal-adventure.tsx`
+### **Personal Content Updates**
+- **Story Data**: Update `terminal-adventure-enhanced.tsx` with your journey
+- **Projects**: Modify `projects.tsx` with your real projects
+- **Experience**: Edit `experience.tsx` with your achievements
+- **Skills**: Update `skills.tsx` with your tech stack
 
-### **AI Responses**
+### **AI Personality**
 - **Main Chat**: Update profile data in `app/api/simple-chat/route.ts`
-- **Inspector**: Modify element info in `components/inspect-mode-context.tsx`
-- **GitHub Data**: Configure in `lib/github-data.ts`
+- **Inspector**: Modify technical explanations in `components/inspect-mode-context.tsx`
 
 ## 🚀 Deployment
 
@@ -308,12 +288,14 @@ portfolio-2025/
 1. Push your code to GitHub
 2. Connect your repository to Vercel
 3. Add environment variables in Vercel dashboard
-4. Deploy automatically on every push
+4. **Important**: Verify your domain in Resend for email functionality
+5. Deploy automatically on every push
 
-### **Other Platforms**
-- **Netlify**: Works with static export
-- **Railway**: Full-stack deployment
-- **DigitalOcean**: App Platform deployment
+### **Domain Setup**
+1. **Purchase Domain**: Get your custom domain (e.g., yourname.com)
+2. **Verify in Resend**: Add domain to Resend dashboard
+3. **Update Email**: Change contact form to use your verified domain
+4. **DNS Configuration**: Point domain to Vercel
 
 ## 🤝 Contributing
 
@@ -337,100 +319,125 @@ While this is a personal portfolio, I welcome suggestions and improvements!
 ## 📈 Performance
 
 - **Lighthouse Score**: 95+ across all metrics
-- **Core Web Vitals**: Optimized for speed
-- **Bundle Size**: Minimized with tree shaking
+- **Core Web Vitals**: Optimized for speed and user experience
+- **Bundle Size**: Minimized with tree shaking and code splitting
 - **Images**: Optimized with Next.js Image component
-- **AI Responses**: Streaming for real-time feel
+- **Animations**: Hardware-accelerated with Framer Motion
 
 ## 🔒 Security
 
 - **Environment Variables**: Secure API key handling
-- **Form Validation**: Server-side validation
-- **Rate Limiting**: API route protection
-- **CORS**: Proper cross-origin handling
+- **Form Validation**: Server-side validation with sanitization
+- **Rate Limiting**: API route protection against abuse
+- **CORS**: Proper cross-origin resource sharing
+- **Domain Verification**: Verified email sending domain
 
 ## 📱 Browser Support
 
-- **Chrome**: 90+
-- **Firefox**: 88+
-- **Safari**: 14+
-- **Edge**: 90+
-- **Mobile**: iOS 14+, Android 10+
+- **Chrome**: 90+ ✅
+- **Firefox**: 88+ ✅
+- **Safari**: 14+ ✅
+- **Edge**: 90+ ✅
+- **Mobile**: iOS 14+, Android 10+ ✅
 
-## 🐛 Known Issues
+## 🐛 Known Issues & Solutions
 
-- [ ] GitHub API rate limiting without token
-- [ ] Some animations may be reduced on low-power devices
-- [ ] Email delivery depends on Resend service status
-- [ ] Terminal game may need refresh on mobile for optimal experience
+- ✅ **Email Delivery**: Fixed with verified domain setup
+- ✅ **GitHub Rate Limiting**: Handled with proper error boundaries
+- ⚠️ **Animation Performance**: Reduced on low-power devices
+- ⚠️ **Terminal Fonts**: Fallback fonts for better compatibility
 
 ## 🔮 Future Enhancements
 
-- [ ] **Blog Integration**: MDX-powered blog with AI-generated content
-- [ ] **Dark/Light Mode**: Theme switching with system preference
-- [ ] **Analytics Dashboard**: Visitor tracking and interaction analytics
-- [ ] **CMS Integration**: Headless CMS for easy content updates
-- [ ] **PWA Features**: Offline support and app-like experience
-- [ ] **3D Elements**: Three.js integration for portfolio showcase
-- [ ] **Voice Commands**: Speech recognition for terminal game
-- [ ] **Multiplayer Elements**: Share terminal game progress
+- [ ] **Blog Integration**: MDX-powered technical blog
+- [ ] **Dark/Light Mode**: Theme switching (currently terminal-only)
+- [ ] **Analytics Dashboard**: Visitor tracking and interaction metrics
+- [ ] **CMS Integration**: Content management for easier updates
+- [ ] **PWA Features**: Offline support and app installation
+- [ ] **3D Terminal**: Three.js integration for immersive experience
+- [ ] **Voice Commands**: Speech recognition for terminal interaction
+- [ ] **Multi-language**: Support for French (Guinea heritage)
 
 ## 📊 Analytics & Monitoring
 
-- **Performance**: Web Vitals monitoring
-- **Errors**: Error boundary implementation
-- **Usage**: Contact form and chatbot analytics
-- **AI**: Model performance and fallback tracking
-- **Game**: Terminal adventure completion rates
+- **Performance**: Web Vitals monitoring with Vercel Analytics
+- **Errors**: Error boundary implementation with detailed logging
+- **Usage**: Contact form and chatbot interaction tracking
+- **AI**: Model performance and response quality monitoring
 
 ## 🎯 Learning Resources
 
-This portfolio demonstrates:
-- **Modern React Patterns**: Server Components, Actions, and Hooks
-- **AI Integration**: Multiple model handling with fallbacks
-- **Animation Techniques**: Framer Motion best practices
-- **Email Systems**: Professional email handling with React Email
-- **TypeScript**: Advanced type patterns and safety
-- **Performance**: Optimization techniques and Core Web Vitals
-- **Interactive Storytelling**: Gamification in web development
-- **API Integration**: GitHub REST API and real-time data
+This portfolio demonstrates advanced concepts in:
 
-## 🎓 My Education Journey
+### **Modern React Patterns**
+- Server Components and Server Actions
+- useActionState for form handling
+- Suspense boundaries and error handling
+- Custom hooks for complex state management
 
-### **Old Dominion University** (2024-Present)
-- **Degree**: B.S. in Computer Science
-- **Status**: Currently enrolled
-- **Focus**: Advanced algorithms, software engineering, AI/ML
+### **AI Integration**
+- Multiple AI model handling with fallbacks
+- Streaming responses for better UX
+- Context-aware AI assistants
+- Real-time data integration with AI
 
-### **Tidewater Community College** (2022-2024)
-- **Degree**: A.S. in Computer Science
-- **Graduated**: December 2024
-- **Achievement**: 1st place in Fall 2024 internship competition
-- **GPA**: Strong academic performance
+### **Animation Techniques**
+- Framer Motion best practices
+- Performance-optimized animations
+- Interactive hover and click effects
+- Scroll-triggered animations
 
-### **Self-Taught Journey** (2018-Present)
-- **Languages**: JavaScript, TypeScript, Python, Java
-- **Frameworks**: React, Next.js, Node.js, Express
-- **Databases**: PostgreSQL, MongoDB, Supabase, Firebase
-- **AI/ML**: Gemini, OpenAI, Hugging Face, Groq
-- **Tools**: Git, Docker, Vercel, AWS basics
+### **Email Systems**
+- Professional email handling with React Email
+- Domain verification and deliverability
+- Template design and responsive layouts
+- Server-side form processing
+
+### **TypeScript Advanced Patterns**
+- Strict type safety throughout
+- Custom type definitions
+- Generic components and utilities
+- API response type safety
+
+## 🌟 **What Makes This Portfolio Special**
+
+### 🎮 **Interactive Storytelling**
+Unlike traditional portfolios, this creates an **emotional connection** through interactive storytelling. Visitors don't just read about my skills - they experience my journey.
+
+### 🤖 **AI-Powered Assistance**
+The AI chatbots aren't just gimmicks - they're trained on my real data and can answer detailed questions about my projects, experience, and technical decisions.
+
+### 🎨 **Unique Design Language**
+The terminal aesthetic isn't just trendy - it reflects my developer identity and creates a memorable brand experience.
+
+### 📊 **Real Data Integration**
+Everything is connected to real APIs and live data - GitHub repos, actual projects, verified contact system.
+
+### 🏆 **Proven Results**
+This isn't just a portfolio - it's a demonstration of the same skills that won 1st place in a competitive internship program.
 
 ## 📞 Contact & Support
 
-**Mohamed Datt** - *Full Stack Developer & AI Enthusiast*
+**Mohamed Datt** - 20 years old, Norfolk, Virginia
+
 - 📧 Email: [d.mohamed1504@gmail.com](mailto:d.mohamed1504@gmail.com)
 - 🐙 GitHub: [@MeeksonJr](https://github.com/MeeksonJr)
-- 💼 LinkedIn: [mohamed-datt](https://www.linkedin.com/in/mohamed-datt-b60907296)
+- 💼 LinkedIn: [mohamed-datt-b60907296](https://www.linkedin.com/in/mohamed-datt-b60907296)
 - 🌐 Portfolio: [mohameddatt.com](https://mohameddatt.com)
-- 📍 Location: Norfolk, Virginia, USA
-- 🎂 Age: 20 years old (Born October 15, 2004)
+- 📄 Resume: [Download PDF](./public/resume-Mohamed-Datt-Full%20Stack%20Developer-2025.pdf)
 
-### **Let's Connect!**
-I'm always open to:
-- **Job Opportunities**: Full-stack developer roles
-- **Collaboration**: Open source projects and hackathons
-- **Mentorship**: Helping other self-taught developers
-- **Networking**: Meeting fellow developers and entrepreneurs
+### 🎓 **Current Status**
+- **Education**: Computer Science student at Old Dominion University
+- **Previous**: A.S. Computer Science from Tidewater Community College (2024)
+- **Achievement**: 1st place winner in Fall 2024 internship competition
+- **Availability**: Open to full-time opportunities and exciting projects
+
+### 🚀 **Looking For**
+- Full-time Software Engineer positions
+- AI/ML development opportunities
+- Startup collaborations
+- Mentorship and learning opportunities
+- Open source contributions
 
 ## 📄 License
 
@@ -438,28 +445,38 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **Vercel Team**: For the amazing AI SDK and deployment platform
-- **Framer**: For the incredible Motion library
+### **Technology Partners**
+- **Vercel Team**: For the incredible AI SDK and deployment platform
+- **Framer**: For the powerful Motion library that brings everything to life
 - **Tailwind Labs**: For the utility-first CSS framework
 - **Resend Team**: For the developer-friendly email service
-- **Open Source Community**: For the countless libraries and tools
-- **Dora the Explorer**: For teaching me English in 3 months 😄
-- **My Family**: For supporting my journey from Guinea to becoming a developer
-- **TCC & ODU**: For providing excellent computer science education
+- **Google**: For Gemini AI that powers the intelligent interactions
+- **Groq**: For lightning-fast AI inference
+
+### **Personal Inspiration**
+- **Dora the Explorer**: For teaching me English and showing that learning can be fun 📺
+- **My Family**: For supporting the journey from Guinea to Norfolk
+- **TCC Professors**: For believing in a self-taught developer
+- **Internship Team**: For the collaborative spirit that led to our 1st place win
+- **Open Source Community**: For the countless libraries and tools that make this possible
+
+### **Special Thanks**
+- **Guinea 🇬🇳**: Where the journey began
+- **New York City 🗽**: Where I learned to adapt and thrive
+- **Norfolk, Virginia 🌊**: Where I'm building my future
+- **The Internet**: For being my university when I needed it most
 
 ---
 
 <div align="center">
 
-**Built with ❤️ by Mohamed Datt**
+**Built with ❤️ and lots of ☕ by Mohamed Datt**
 
 *From Guinea to Norfolk, Virginia - The journey continues...*
 
-**"Learned English from cartoons, now building AI-powered applications"**
-
 [![GitHub stars](https://img.shields.io/github/stars/MeeksonJr/portfolio-2025?style=social)](https://github.com/MeeksonJr/portfolio-2025)
-[![Twitter Follow](https://img.shields.io/twitter/follow/MeeksonJr?style=social)](https://twitter.com/MeeksonJr)
+[![Follow on LinkedIn](https://img.shields.io/badge/Follow-LinkedIn-blue?style=social&logo=linkedin)](https://www.linkedin.com/in/mohamed-datt-b60907296)
 
-*🎮 Don't forget to play the Terminal Adventure to experience my full journey!*
+**"Learning English from Dora, building the future with AI"** 🚀
 
 </div>

@@ -154,7 +154,7 @@ export default function Contact() {
 
               {/* Quick Action */}
               <motion.a
-                href="/resume-Mohamed-Datt-Full Stack Developer-2025.pdf"
+                href="/resume-2025-Mohamed-Datt-Full Stack Developer (1).pdf"
                 target="_blank"
                 className="flex items-center justify-center gap-2 p-4 bg-green-400/10 border border-green-400/30 rounded-lg hover:bg-green-400/20 transition-colors text-sm font-mono group"
                 whileHover={{ scale: 1.02 }}

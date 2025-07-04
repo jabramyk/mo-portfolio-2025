@@ -1189,7 +1189,7 @@ export default function TerminalAdventureEnhanced() {
         break
       case "contact_resume":
         const link = document.createElement("a")
-        link.href = "/resume-Mohamed-Datt-Full Stack Developer-2025.pdf"
+        link.href = "/resume-2025-Mohamed-Datt-Full Stack Developer (1).pdf"
         link.download = "Mohamed-Datt-Resume-2025.pdf"
         link.click()
         break

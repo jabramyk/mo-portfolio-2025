@@ -83,7 +83,7 @@ export async function submitContactFormWithConfirmation(prevState: any, formData
 
     // Send confirmation email to user
     const { data: confirmationData, error: confirmationError } = await resend.emails.send({
-      from: "Mohamed Datt <onboarding@resend.dev>",
+      from: "Mohamed Datt <contact@mohameddatt.com>",
       to: [emailStr],
       subject: "Thanks for reaching out!",
       react: ContactConfirmation({

